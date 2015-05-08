@@ -16,7 +16,20 @@ public class Stock
 	private final int REMOVE = 2;
 	private final int HOLD = 3;
 	
+	public Stock (String symbol, float ask, float bid, Date date, int recommendation,
+			int stockQuantity)
+	{
+		setSymbol(symbol);
+		setAsk(ask);
+		setBid(bid);
+		setDate(date);	
+	}
 	
+	public Stock (Stock other)
+	{
+		this(other.symbol, other.ask, other.bid, other.date, other.recommendation,
+				other.stockQuantity);
+	}
 	
 	public String getSymbol() {
 		return symbol;
